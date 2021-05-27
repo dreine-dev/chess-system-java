@@ -1,4 +1,4 @@
-package tabuleiro;
+package tabuleiroxadrez;
 
 public class Position {
 

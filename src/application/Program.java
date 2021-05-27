@@ -1,14 +1,14 @@
 package application;
 
-import tabuleiro.Position;
+
+import tabuleiroxadrez.Tabuleiro;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-Position pos = new Position(3,5);
 
-System.out.println(pos.toString());
+Tabuleiro tab = new Tabuleiro(8, 8);
 
 	}
 
