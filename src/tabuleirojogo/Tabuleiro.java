@@ -2,30 +2,30 @@ package tabuleirojogo;
 
 public class Tabuleiro {
 
-	private int linha;
-	private int coluna;
+	private int linhas;
+	private int colunas;
 	private Peca[][] pecas;
 
 	public Tabuleiro(int linha, int coluna) {
-		this.linha = linha;
-		this.coluna = coluna;
+		this.linhas = linha;
+		this.colunas = coluna;
 		pecas = new Peca[linha][coluna];
 	}
 
 	public int getLinha() {
-		return linha;
+		return linhas;
 	}
 
 	public void setLinha(int linha) {
-		this.linha = linha;
+		this.linhas = linha;
 	}
 
 	public int getColuna() {
-		return coluna;
+		return colunas;
 	}
 
 	public void setColuna(int coluna) {
-		this.coluna = coluna;
+		this.colunas = coluna;
 	}
 
 	public Peca peca(int linha, int coluna) {
