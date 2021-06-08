@@ -1,5 +1,7 @@
 package tabuleirojogo;
 
+import xadrez.PecaDeXadrez;
+
 public class Tabuleiro {
 
 	private int linhas;
@@ -31,8 +33,14 @@ public class Tabuleiro {
 	public Peca peca(int linha, int coluna) {
 		return pecas[linha][coluna];
 	}
-	//METODO SOBRE CARGA - OVERLOAD
+
+	// METODO SOBRE CARGA - OVERLOAD
 	public Peca peca(Posicao posicao) {
 		return pecas[posicao.getLinha()][posicao.getColuna()];
+	}
+
+	public void pecaLugar(Peca peca, Posicao posicao) {
+		pecas[posicao.getLinha()][posicao.getColuna()] = peca;
+		peca.posicao = posicao;
 	}
 }
