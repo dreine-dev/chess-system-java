@@ -33,7 +33,7 @@ public class Tabuleiro {
 
 	// METODO SOBRE CARGA - OVERLOAD
 	public Peca peca(Posicao posicao) {
-		if (!posicaoExixte(posicao)) {
+		if (!posicaoExiste(posicao)) {
 			throw new TabuleiroException("Posição não exixte em tabuleiro");
 		}
 		return pecas[posicao.getLinha()][posicao.getColuna()];
@@ -51,12 +51,12 @@ public class Tabuleiro {
 		return linha >= 0 && linha < linhas && coluna >= 0 && coluna < colunas;
 	}
 
-	public boolean posicaoExixte(Posicao posicao) {
+	public boolean posicaoExiste(Posicao posicao) {
 		return posicaoExiste(posicao.getLinha(), posicao.getColuna());
 	}
 
 	public boolean existeUmaPeca(Posicao posicao) {
-		if (!posicaoExixte(posicao)) {
+		if (!posicaoExiste(posicao)) {
 			throw new TabuleiroException("Posição não exixte em tabuleiro");
 		}
 		return peca(posicao) != null;
